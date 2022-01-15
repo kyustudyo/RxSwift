@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0BBD2C2792802A00949CE4 /* Uiviewcontroller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0BBD2B2792802A00949CE4 /* Uiviewcontroller+Extension.swift */; };
+		3B0BBD2E279283D200949CE4 /* ToDoAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0BBD2D279283D200949CE4 /* ToDoAddViewController.swift */; };
+		3B0BBD3027928E7700949CE4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0BBD2F27928E7700949CE4 /* UIView+Extension.swift */; };
+		3B0BBD39279296FC00949CE4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0BBD38279296FC00949CE4 /* Task.swift */; };
+		3B0BBD3D2792D8CF00949CE4 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0BBD3C2792D8CF00949CE4 /* NewsTableViewController.swift */; };
+		3B0BBD402792FF1700949CE4 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0BBD3F2792FF1700949CE4 /* Article.swift */; };
+		3B23A74C279303DD00980742 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B23A74B279303DD00980742 /* NewsCell.swift */; };
 		3BA18FED279129AE00E0B1F1 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18FEC279129AE00E0B1F1 /* PhotosCollectionViewController.swift */; };
 		3BA18FEF2791474800E0B1F1 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18FEE2791474800E0B1F1 /* PhotoCollectionViewCell.swift */; };
 		3BA18FF1279153B300E0B1F1 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18FF0279153B300E0B1F1 /* FilterService.swift */; };
 		3BA18FF5279164BA00E0B1F1 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18FF4279164BA00E0B1F1 /* TaskListViewController.swift */; };
 		3BD10BB72790609800867A34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD10BB62790609800867A34 /* AppDelegate.swift */; };
 		3BD10BB92790609800867A34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD10BB82790609800867A34 /* SceneDelegate.swift */; };
-		3BD10BBB2790609800867A34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD10BBA2790609800867A34 /* ViewController.swift */; };
+		3BD10BBB2790609800867A34 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD10BBA2790609800867A34 /* MainViewController.swift */; };
 		3BD10BBE2790609800867A34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD10BBC2790609800867A34 /* Main.storyboard */; };
 		3BD10BC02790609900867A34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD10BBF2790609900867A34 /* Assets.xcassets */; };
 		3BD10BC32790609900867A34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD10BC12790609900867A34 /* LaunchScreen.storyboard */; };
@@ -21,15 +28,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B0BBD2B2792802A00949CE4 /* Uiviewcontroller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uiviewcontroller+Extension.swift"; sourceTree = "<group>"; };
+		3B0BBD2D279283D200949CE4 /* ToDoAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAddViewController.swift; sourceTree = "<group>"; };
+		3B0BBD2F27928E7700949CE4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3B0BBD342792968600949CE4 /* filtering operator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "filtering operator.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3B0BBD38279296FC00949CE4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		3B0BBD3A2792D36700949CE4 /* TransformOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransformOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3B0BBD3C2792D8CF00949CE4 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		3B0BBD3F2792FF1700949CE4 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		3B23A74B279303DD00980742 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		3BA18FEC279129AE00E0B1F1 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		3BA18FEE2791474800E0B1F1 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BA18FF0279153B300E0B1F1 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
-		3BA18FF22791573700E0B1F1 /* filtering operator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "filtering operator.playground"; path = "../../filtering operator.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3BA18FF4279164BA00E0B1F1 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		3BD10BB32790609800867A34 /* rxSwift_.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rxSwift_.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD10BB62790609800867A34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BD10BB82790609800867A34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3BD10BBA2790609800867A34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BD10BBA2790609800867A34 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3BD10BBD2790609800867A34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BD10BBF2790609900867A34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BD10BC22790609900867A34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,12 +67,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B0BBD2A2792800E00949CE4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3B0BBD2B2792802A00949CE4 /* Uiviewcontroller+Extension.swift */,
+				3B0BBD2F27928E7700949CE4 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3B0BBD312792963C00949CE4 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				3BA18FEC279129AE00E0B1F1 /* PhotosCollectionViewController.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		3B0BBD322792964A00949CE4 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				3BA18FF4279164BA00E0B1F1 /* TaskListViewController.swift */,
+				3B0BBD2D279283D200949CE4 /* ToDoAddViewController.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
+		3B0BBD332792967C00949CE4 /* PlayGround */ = {
+			isa = PBXGroup;
+			children = (
+				3B0BBD3A2792D36700949CE4 /* TransformOperator.playground */,
+				3B0BBD342792968600949CE4 /* filtering operator.playground */,
+				3BD10BCA2790612A00867A34 /* RxSwiftPlayGround.playground */,
+			);
+			path = PlayGround;
+			sourceTree = "<group>";
+		};
+		3B0BBD362792969A00949CE4 /* Supporters */ = {
+			isa = PBXGroup;
+			children = (
+				3BD10BC12790609900867A34 /* LaunchScreen.storyboard */,
+				3BD10BBF2790609900867A34 /* Assets.xcassets */,
+				3BD10BB82790609800867A34 /* SceneDelegate.swift */,
+				3BD10BB62790609800867A34 /* AppDelegate.swift */,
+			);
+			path = Supporters;
+			sourceTree = "<group>";
+		};
+		3B0BBD37279296BB00949CE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B0BBD38279296FC00949CE4 /* Task.swift */,
+				3B0BBD3F2792FF1700949CE4 /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3B0BBD3B2792D89A00949CE4 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				3B0BBD3C2792D8CF00949CE4 /* NewsTableViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		3B23A74A279303CD00980742 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B23A74B279303DD00980742 /* NewsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3BA18FF3279164A600E0B1F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3BD10BBA2790609800867A34 /* ViewController.swift */,
-				3BA18FF4279164BA00E0B1F1 /* TaskListViewController.swift */,
-				3BA18FEC279129AE00E0B1F1 /* PhotosCollectionViewController.swift */,
+				3B0BBD3B2792D89A00949CE4 /* News */,
+				3B0BBD322792964A00949CE4 /* Todo */,
+				3B0BBD312792963C00949CE4 /* Photo */,
+				3BD10BBA2790609800867A34 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -83,14 +171,13 @@
 		3BD10BB52790609800867A34 /* rxSwift_ */ = {
 			isa = PBXGroup;
 			children = (
-				3BD10BCA2790612A00867A34 /* RxSwiftPlayGround.playground */,
-				3BA18FF22791573700E0B1F1 /* filtering operator.playground */,
+				3B23A74A279303CD00980742 /* View */,
+				3B0BBD37279296BB00949CE4 /* Models */,
+				3B0BBD362792969A00949CE4 /* Supporters */,
+				3B0BBD332792967C00949CE4 /* PlayGround */,
+				3B0BBD2A2792800E00949CE4 /* Extensions */,
 				3BA18FF3279164A600E0B1F1 /* Controllers */,
-				3BD10BB62790609800867A34 /* AppDelegate.swift */,
-				3BD10BB82790609800867A34 /* SceneDelegate.swift */,
 				3BD10BBC2790609800867A34 /* Main.storyboard */,
-				3BD10BBF2790609900867A34 /* Assets.xcassets */,
-				3BD10BC12790609900867A34 /* LaunchScreen.storyboard */,
 				3BD10BC42790609900867A34 /* Info.plist */,
 				3BA18FEE2791474800E0B1F1 /* PhotoCollectionViewCell.swift */,
 				3BA18FF0279153B300E0B1F1 /* FilterService.swift */,
@@ -230,12 +317,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0BBD402792FF1700949CE4 /* Article.swift in Sources */,
+				3B0BBD2C2792802A00949CE4 /* Uiviewcontroller+Extension.swift in Sources */,
 				3BA18FF5279164BA00E0B1F1 /* TaskListViewController.swift in Sources */,
-				3BD10BBB2790609800867A34 /* ViewController.swift in Sources */,
+				3BD10BBB2790609800867A34 /* MainViewController.swift in Sources */,
 				3BA18FEF2791474800E0B1F1 /* PhotoCollectionViewCell.swift in Sources */,
+				3B0BBD39279296FC00949CE4 /* Task.swift in Sources */,
+				3B0BBD2E279283D200949CE4 /* ToDoAddViewController.swift in Sources */,
 				3BD10BB72790609800867A34 /* AppDelegate.swift in Sources */,
 				3BA18FF1279153B300E0B1F1 /* FilterService.swift in Sources */,
+				3B0BBD3D2792D8CF00949CE4 /* NewsTableViewController.swift in Sources */,
+				3B23A74C279303DD00980742 /* NewsCell.swift in Sources */,
 				3BD10BB92790609800867A34 /* SceneDelegate.swift in Sources */,
+				3B0BBD3027928E7700949CE4 /* UIView+Extension.swift in Sources */,
 				3BA18FED279129AE00E0B1F1 /* PhotosCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +483,7 @@
 				DEVELOPMENT_TEAM = H5PD3P95F5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = rxSwift_/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진에 접근해야합니다!.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -418,6 +513,7 @@
 				DEVELOPMENT_TEAM = H5PD3P95F5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = rxSwift_/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진에 접근해야합니다!.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

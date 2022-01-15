@@ -2,12 +2,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-let observable1 = Observable.just(1)
-let observable2 = Observable.of(1,2,3)
-let observable3 = Observable.of([1,2,3])
-let observable4 = Observable.from([1,2,3,4])
+let observable1 = Observable.just(1)// observe
+let observable2 = Observable.of(1,2,3)// observe
+let observable3 = Observable.of([1,2,3])// observe
+let observable4 = Observable.from([1,2,3,4])// observe
 
-observable4.subscribe{ event in
+observable4.subscribe{ event in// subscribe
     print(event)
 }
 
@@ -22,7 +22,7 @@ observable4.subscribe(onNext:{ element in
 })
 
 observable3.subscribe{ event in
-    print(event)
+    print("observce3_",event)
 }
 
 observable3.subscribe{ event in
@@ -54,16 +54,16 @@ Observable<String>.create { observer in
 }.subscribe { print($0)
     
 } onError: {
-    print($0)
+    print("err",$0)
 } onCompleted: {
-    print("complete")
+    print("complete~~")
 } onDisposed: {
-    print("dispose")
+    print("dispose~~")
 }.disposed(by: disposeBag)
 
 //publsih subject
 let subject = PublishSubject<String>()
-subject.onNext("issue 1")
+subject.onNext("issue 1")// no
 
 subject.subscribe{ event in
     print(event)
@@ -84,11 +84,11 @@ behaviorSubject.subscribe{event in
     print(event)
 }
 behaviorSubject.onNext("behaviorSubject 1")
-
+behaviorSubject.onNext("behaviorSubject 2")
 
 //replay subject
 let replaySubject = ReplaySubject<String>.create(bufferSize: 2)
-replaySubject.onNext("1")
+replaySubject.onNext("1")// no
 replaySubject.onNext("2")
 replaySubject.onNext("3")
 replaySubject.subscribe{
@@ -97,12 +97,13 @@ replaySubject.subscribe{
 replaySubject.onNext("4")
 replaySubject.onNext("5")
 replaySubject.onNext("6")
+replaySubject.onNext("7")
 print("replay subscription 2")
 replaySubject.subscribe{
     print("replay2",$0)
 }
 
-//
+//Varibale _ deprecated
 
 let variable = Variable([String]())
 variable.value.append("item1")
@@ -121,7 +122,7 @@ relay.asObservable()
     }
 //relay.value = "d"//불가능
 relay.accept("new val")
-
+relay.accept("new val2")
 let relay2 = BehaviorRelay(value: [String]())
 //relay2.value.append("item22")//불가능
 relay2.accept(["item ad"])
@@ -145,9 +146,9 @@ relay4.asObservable()
     .subscribe{
         print($0)
     }
+relay4.accept(relay4.value + ["item aaaa"])
 
-
-//var 로 선언해도 마찬가지로 사라지지않음
+//var 로 선언
 let relay5 = BehaviorRelay(value: ["qqq"])
 var realy5Value = relay5.value
 realy5Value.append("jjj")

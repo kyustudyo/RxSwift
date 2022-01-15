@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     @IBOutlet weak var photoImageView: UIImageView!
     
@@ -16,16 +16,13 @@ class ViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "circle"), style: .plain, target: self, action: #selector(showToDoVC))//navigation controller 붙히면 안된다.
-        
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.yellow]
         super.viewDidLoad()
-        
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
+        let toDo =  UIBarButtonItem(image: UIImage(systemName: "play"), style: .plain, target: self, action: #selector(showToDoVC))
+        let news =  UIBarButtonItem(image: UIImage(systemName: "play"), style: .plain, target: self, action: #selector(showNewsVC))
+        navigationItem.leftBarButtonItems = [toDo, news]
+
         //이렇게해야 large title 보인다.
-        
-        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -35,8 +32,6 @@ class ViewController: UIViewController {
         }
         
         photosCVC.selectedPhoto.subscribe(onNext: { [weak self] photo in
-            
-//            self?.photoImageView.image = photo
             self?.updateUI(with: photo)
         }).disposed(by: disposeBag)
         
@@ -45,6 +40,7 @@ class ViewController: UIViewController {
         guard let sourceImage = self.photoImageView.image else {
             return
         }
+        
         
         //기존 방식.
 //        FiltersService().applyFilter(to: sourceImage) { filteredImage in
@@ -76,7 +72,14 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "TaskListViewController") as? TaskListViewController else {return}
         let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
+        nav.modalPresentationStyle = .overCurrentContext
+        //nav 였는데 또 nav 하면 새로운 nav로 나타난다.
+        present(nav, animated: true, completion: nil)
+    }
+    @objc func showNewsVC(){
+        let vc = NewsTableViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle  = .overCurrentContext
         //nav 였는데 또 nav 하면 새로운 nav로 나타난다.
         present(nav, animated: true, completion: nil)
     }
