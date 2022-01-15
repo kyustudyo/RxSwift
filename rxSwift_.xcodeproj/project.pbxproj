@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BA18FED279129AE00E0B1F1 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18FEC279129AE00E0B1F1 /* PhotosCollectionViewController.swift */; };
+		3BA18FEF2791474800E0B1F1 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18FEE2791474800E0B1F1 /* PhotoCollectionViewCell.swift */; };
+		3BA18FF1279153B300E0B1F1 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18FF0279153B300E0B1F1 /* FilterService.swift */; };
+		3BA18FF5279164BA00E0B1F1 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA18FF4279164BA00E0B1F1 /* TaskListViewController.swift */; };
 		3BD10BB72790609800867A34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD10BB62790609800867A34 /* AppDelegate.swift */; };
 		3BD10BB92790609800867A34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD10BB82790609800867A34 /* SceneDelegate.swift */; };
 		3BD10BBB2790609800867A34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD10BBA2790609800867A34 /* ViewController.swift */; };
@@ -17,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BA18FEC279129AE00E0B1F1 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		3BA18FEE2791474800E0B1F1 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BA18FF0279153B300E0B1F1 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
+		3BA18FF22791573700E0B1F1 /* filtering operator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "filtering operator.playground"; path = "../../filtering operator.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3BA18FF4279164BA00E0B1F1 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		3BD10BB32790609800867A34 /* rxSwift_.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rxSwift_.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD10BB62790609800867A34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BD10BB82790609800867A34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +52,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BA18FF3279164A600E0B1F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BD10BBA2790609800867A34 /* ViewController.swift */,
+				3BA18FF4279164BA00E0B1F1 /* TaskListViewController.swift */,
+				3BA18FEC279129AE00E0B1F1 /* PhotosCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		3BD10BAA2790609800867A34 = {
 			isa = PBXGroup;
 			children = (
@@ -65,13 +84,16 @@
 			isa = PBXGroup;
 			children = (
 				3BD10BCA2790612A00867A34 /* RxSwiftPlayGround.playground */,
+				3BA18FF22791573700E0B1F1 /* filtering operator.playground */,
+				3BA18FF3279164A600E0B1F1 /* Controllers */,
 				3BD10BB62790609800867A34 /* AppDelegate.swift */,
 				3BD10BB82790609800867A34 /* SceneDelegate.swift */,
-				3BD10BBA2790609800867A34 /* ViewController.swift */,
 				3BD10BBC2790609800867A34 /* Main.storyboard */,
 				3BD10BBF2790609900867A34 /* Assets.xcassets */,
 				3BD10BC12790609900867A34 /* LaunchScreen.storyboard */,
 				3BD10BC42790609900867A34 /* Info.plist */,
+				3BA18FEE2791474800E0B1F1 /* PhotoCollectionViewCell.swift */,
+				3BA18FF0279153B300E0B1F1 /* FilterService.swift */,
 			);
 			path = rxSwift_;
 			sourceTree = "<group>";
@@ -208,9 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BA18FF5279164BA00E0B1F1 /* TaskListViewController.swift in Sources */,
 				3BD10BBB2790609800867A34 /* ViewController.swift in Sources */,
+				3BA18FEF2791474800E0B1F1 /* PhotoCollectionViewCell.swift in Sources */,
 				3BD10BB72790609800867A34 /* AppDelegate.swift in Sources */,
+				3BA18FF1279153B300E0B1F1 /* FilterService.swift in Sources */,
 				3BD10BB92790609800867A34 /* SceneDelegate.swift in Sources */,
+				3BA18FED279129AE00E0B1F1 /* PhotosCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
