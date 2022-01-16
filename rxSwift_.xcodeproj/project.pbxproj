@@ -24,6 +24,7 @@
 		3BD10BBE2790609800867A34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD10BBC2790609800867A34 /* Main.storyboard */; };
 		3BD10BC02790609900867A34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD10BBF2790609900867A34 /* Assets.xcassets */; };
 		3BD10BC32790609900867A34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD10BC12790609900867A34 /* LaunchScreen.storyboard */; };
+		3BFD87572794536600BCF06B /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD87562794536600BCF06B /* URLRequest+Extension.swift */; };
 		4FA6586DB1986452C2B02193 /* Pods_rxSwift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6217FBE73ED3E456C9C9EE9D /* Pods_rxSwift_.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,8 @@
 		3BD10BC22790609900867A34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BD10BC42790609900867A34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BD10BCA2790612A00867A34 /* RxSwiftPlayGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSwiftPlayGround.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3BFD87562794536600BCF06B /* URLRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
+		3BFD87582794571100BCF06B /* startWith.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = startWith.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6217FBE73ED3E456C9C9EE9D /* Pods_rxSwift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rxSwift_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00CBD17A06BEA8B4A57D011 /* Pods-rxSwift_.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxSwift_.release.xcconfig"; path = "Target Support Files/Pods-rxSwift_/Pods-rxSwift_.release.xcconfig"; sourceTree = "<group>"; };
 		D7B5BAF6E4B78DD5491A103D /* Pods-rxSwift_.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxSwift_.debug.xcconfig"; path = "Target Support Files/Pods-rxSwift_/Pods-rxSwift_.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 			children = (
 				3B0BBD2B2792802A00949CE4 /* Uiviewcontroller+Extension.swift */,
 				3B0BBD2F27928E7700949CE4 /* UIView+Extension.swift */,
+				3BFD87562794536600BCF06B /* URLRequest+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -99,6 +103,7 @@
 				3B0BBD3A2792D36700949CE4 /* TransformOperator.playground */,
 				3B0BBD342792968600949CE4 /* filtering operator.playground */,
 				3BD10BCA2790612A00867A34 /* RxSwiftPlayGround.playground */,
+				3BFD87582794571100BCF06B /* startWith.playground */,
 			);
 			path = PlayGround;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				3BD10BB72790609800867A34 /* AppDelegate.swift in Sources */,
 				3BA18FF1279153B300E0B1F1 /* FilterService.swift in Sources */,
 				3B0BBD3D2792D8CF00949CE4 /* NewsTableViewController.swift in Sources */,
+				3BFD87572794536600BCF06B /* URLRequest+Extension.swift in Sources */,
 				3B23A74C279303DD00980742 /* NewsCell.swift in Sources */,
 				3BD10BB92790609800867A34 /* SceneDelegate.swift in Sources */,
 				3B0BBD3027928E7700949CE4 /* UIView+Extension.swift in Sources */,

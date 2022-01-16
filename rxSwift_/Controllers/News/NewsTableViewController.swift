@@ -9,6 +9,8 @@ import Foundation
 
 import UIKit
 import RxSwift
+private let reuseIdentifier = "cell"
+
 class NewsTableViewController : UITableViewController {
     
     let disposeBag = DisposeBag()
@@ -18,52 +20,65 @@ class NewsTableViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "news!"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        populateNews()
         configureUI()
+        populateNews()
+        
         
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return articles.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? NewsCell else {return UITableViewCell()}
-        cell.detailLabel.text = "a"
-        cell.mainLabel.text = "a"
-        print("complete")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? NewsCell else {return UITableViewCell()}
+        
+        cell.mainLabel.text = self.articles[indexPath.row].title
+        cell.detailLabel.text = self.articles[indexPath.row].description
         return cell
     }
     
     private func configureUI() {
-        tableView.register(NewsCell.self, forCellReuseIdentifier: "cell")
+        navigationItem.title = "news!"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        tableView.register(NewsCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 80
     }
     
     private func populateNews() {
         
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=1f32f1a3f3a042e498cec8738ff44706")!
+//        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=1f32f1a3f3a042e498cec8738ff44706")!
         
-        Observable.just(url)
-            .flatMap { url -> Observable<Data> in
-                let request = URLRequest(url: url)
-                return URLSession.shared.rx.data(request: request)
-            }.map { data -> [Article]? in
-                return try? JSONDecoder().decode(ArticlesList.self, from: data).articles
-            }.subscribe(onNext: { [weak self] articles in
-                
-                if let articles = articles {
-                    self?.articles = articles
+//        let resource = Resource<ArticlesList>(url: url)
+        
+        URLRequest.load(resource: ArticlesList.all)
+            .subscribe(onNext: { [weak self] result in
+                if let result = result {
+                    self?.articles = result.articles
                     DispatchQueue.main.async {
                         self?.tableView.reloadData()
                     }
                 }
             }).disposed(by: disposeBag)
+
+//        Observable.just(url)
+//            .flatMap { url -> Observable<Data> in
+//                let request = URLRequest(url: url)
+//                return URLSession.shared.rx.data(request: request)
+//            }.map { data -> [Article]? in
+//                return try? JSONDecoder().decode(ArticlesList.self, from: data).articles
+//            }.subscribe(onNext: { [weak self] articles in
+//
+//                if let articles = articles {
+//                    self?.articles = articles
+//                    DispatchQueue.main.async {
+//                        self?.tableView.reloadData()
+//                    }
+//                }
+//            }).disposed(by: disposeBag)
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
+    
     
     
     
