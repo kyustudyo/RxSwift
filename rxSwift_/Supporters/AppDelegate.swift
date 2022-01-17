@@ -14,12 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+//        UINavigationBar.appearance().barTintColor = .red// not working
        
         
         
         
-//        rgba(52, 152, 219,1.0) flat ui website 참고
+//        rgba(52, 152, 219,1.0) flat UI website 참고
         
         UINavigationBar.appearance().backgroundColor = UIColor(displayP3Red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
         let navBarAppearance = UINavigationBarAppearance()
@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         //vc에서 하려면 아래처럼.
         // navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemGray]
+        
+        
         return true
     }
 

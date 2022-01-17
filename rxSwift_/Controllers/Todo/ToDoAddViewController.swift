@@ -21,7 +21,6 @@ class ToDoAddViewController : UIViewController{
         let control = UISegmentedControl(items: ["High","Medium","Low"])
         control.selectedSegmentIndex = 0
         return control
-        
     }()
     
     private let textField : UITextField = {
@@ -39,7 +38,6 @@ class ToDoAddViewController : UIViewController{
         super.viewDidLoad()
         view.backgroundColor = .white
         configureUI()
-        
     }
     
     

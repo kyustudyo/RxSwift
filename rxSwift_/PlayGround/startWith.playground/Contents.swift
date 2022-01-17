@@ -22,6 +22,7 @@ observable2.subscribe(onNext:{
 }).disposed(by: disposeBag)
 
 //Merge
+print("merge")
 let left = PublishSubject<Int>()
 let right = PublishSubject<Int>()
 
@@ -62,6 +63,7 @@ let observable9 = button.withLatestFrom(textField)
 let disposable9 = observable9.subscribe(onNext:{
     print($0)
 })
+
 textField.onNext("Sw")
 textField.onNext("Swi")
 textField.onNext("Swif")
@@ -92,4 +94,9 @@ source10.scan(0,accumulator: +)
     .subscribe(onNext:{
         print($0)
     }).disposed(by: disposeBag)
+
+
+//weak, nothing, unowned.
+
+
 

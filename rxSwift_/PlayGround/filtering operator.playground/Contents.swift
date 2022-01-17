@@ -22,7 +22,6 @@ let strikes2 = PublishSubject<String>()
 strikes2.elementAt(2)
     .subscribe(onNext:{ _ in
         print("you ar our!")
-        
     }).disposed(by: disposeBag)
 strikes2.onNext("1")
 strikes2.onNext("2")
@@ -42,6 +41,7 @@ Observable.of("a","b","c","d")
     .subscribe(onNext:{
         print($0)
     }).disposed(by: disposeBag)
+
 //skip while
 //연속적인 2 를 지나면 다음은 적용안됨.
 Observable.of(2,2,2,3,4,4,4)

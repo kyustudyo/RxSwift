@@ -75,6 +75,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     private func populatePhotos() {
         //plist 수정 필요.
         //vc가 꺼지면 메모리 leak피하기 위해 weak self.
+        
         //background thread에서 작동.
         PHPhotoLibrary.requestAuthorization { [weak self] status in
             

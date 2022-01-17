@@ -30,6 +30,9 @@ observable3.subscribe{ event in
         print(element)
     }
 }
+observable3.subscribe(onNext:{ element in
+    print(element)
+})
 
 //if we don't dispose subscrbers, memory leak.
 
@@ -61,10 +64,11 @@ Observable<String>.create { observer in
     print("dispose~~")
 }.disposed(by: disposeBag)
 
+
 //publsih subject
+
 let subject = PublishSubject<String>()
 subject.onNext("issue 1")// no
-
 subject.subscribe{ event in
     print(event)
 }

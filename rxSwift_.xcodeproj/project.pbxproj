@@ -24,6 +24,13 @@
 		3BD10BBE2790609800867A34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD10BBC2790609800867A34 /* Main.storyboard */; };
 		3BD10BC02790609900867A34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD10BBF2790609900867A34 /* Assets.xcassets */; };
 		3BD10BC32790609900867A34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD10BC12790609900867A34 /* LaunchScreen.storyboard */; };
+		3BE2E71227952A2D00E618EA /* GoodWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2E71127952A2D00E618EA /* GoodWeatherViewController.swift */; };
+		3BE2E7142795379200E618EA /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2E7132795379200E618EA /* WeatherResult.swift */; };
+		3BE2E71627953DAE00E618EA /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2E71527953DAE00E618EA /* URL+Extension.swift */; };
+		3BE2E71B279568D500E618EA /* NewsTableViewController_MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2E71A279568D500E618EA /* NewsTableViewController_MVVM.swift */; };
+		3BE2E71D27956CD800E618EA /* Article_MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2E71C27956CD800E618EA /* Article_MVVM.swift */; };
+		3BE2E71F2795706100E618EA /* ArticleViewModel_MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2E71E2795706100E618EA /* ArticleViewModel_MVVM.swift */; };
+		3BE2E7212795724600E618EA /* NewsCell_MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2E7202795724600E618EA /* NewsCell_MVVM.swift */; };
 		3BFD87572794536600BCF06B /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD87562794536600BCF06B /* URLRequest+Extension.swift */; };
 		4FA6586DB1986452C2B02193 /* Pods_rxSwift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6217FBE73ED3E456C9C9EE9D /* Pods_rxSwift_.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +58,14 @@
 		3BD10BC22790609900867A34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BD10BC42790609900867A34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BD10BCA2790612A00867A34 /* RxSwiftPlayGround.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSwiftPlayGround.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3BE2E71127952A2D00E618EA /* GoodWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodWeatherViewController.swift; sourceTree = "<group>"; };
+		3BE2E7132795379200E618EA /* WeatherResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResult.swift; sourceTree = "<group>"; };
+		3BE2E71527953DAE00E618EA /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		3BE2E71727955CB900E618EA /* Infomation.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Infomation.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		3BE2E71A279568D500E618EA /* NewsTableViewController_MVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController_MVVM.swift; sourceTree = "<group>"; };
+		3BE2E71C27956CD800E618EA /* Article_MVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article_MVVM.swift; sourceTree = "<group>"; };
+		3BE2E71E2795706100E618EA /* ArticleViewModel_MVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel_MVVM.swift; sourceTree = "<group>"; };
+		3BE2E7202795724600E618EA /* NewsCell_MVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell_MVVM.swift; sourceTree = "<group>"; };
 		3BFD87562794536600BCF06B /* URLRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
 		3BFD87582794571100BCF06B /* startWith.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = startWith.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6217FBE73ED3E456C9C9EE9D /* Pods_rxSwift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rxSwift_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +91,7 @@
 				3B0BBD2B2792802A00949CE4 /* Uiviewcontroller+Extension.swift */,
 				3B0BBD2F27928E7700949CE4 /* UIView+Extension.swift */,
 				3BFD87562794536600BCF06B /* URLRequest+Extension.swift */,
+				3BE2E71527953DAE00E618EA /* URL+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -100,6 +116,7 @@
 		3B0BBD332792967C00949CE4 /* PlayGround */ = {
 			isa = PBXGroup;
 			children = (
+				3BE2E71727955CB900E618EA /* Infomation.playground */,
 				3B0BBD3A2792D36700949CE4 /* TransformOperator.playground */,
 				3B0BBD342792968600949CE4 /* filtering operator.playground */,
 				3BD10BCA2790612A00867A34 /* RxSwiftPlayGround.playground */,
@@ -124,6 +141,7 @@
 			children = (
 				3B0BBD38279296FC00949CE4 /* Task.swift */,
 				3B0BBD3F2792FF1700949CE4 /* Article.swift */,
+				3BE2E7132795379200E618EA /* WeatherResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +165,7 @@
 		3BA18FF3279164A600E0B1F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3BE2E7102795296200E618EA /* Weather */,
 				3B0BBD3B2792D89A00949CE4 /* News */,
 				3B0BBD322792964A00949CE4 /* Todo */,
 				3B0BBD312792963C00949CE4 /* Photo */,
@@ -176,6 +195,7 @@
 		3BD10BB52790609800867A34 /* rxSwift_ */ = {
 			isa = PBXGroup;
 			children = (
+				3BE2E7182795686500E618EA /* MVVM */,
 				3B23A74A279303CD00980742 /* View */,
 				3B0BBD37279296BB00949CE4 /* Models */,
 				3B0BBD362792969A00949CE4 /* Supporters */,
@@ -188,6 +208,25 @@
 				3BA18FF0279153B300E0B1F1 /* FilterService.swift */,
 			);
 			path = rxSwift_;
+			sourceTree = "<group>";
+		};
+		3BE2E7102795296200E618EA /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				3BE2E71127952A2D00E618EA /* GoodWeatherViewController.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		3BE2E7182795686500E618EA /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				3BE2E71A279568D500E618EA /* NewsTableViewController_MVVM.swift */,
+				3BE2E71C27956CD800E618EA /* Article_MVVM.swift */,
+				3BE2E71E2795706100E618EA /* ArticleViewModel_MVVM.swift */,
+				3BE2E7202795724600E618EA /* NewsCell_MVVM.swift */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 		83C97124F25AFB0E51C38C4C /* Pods */ = {
@@ -322,16 +361,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE2E7212795724600E618EA /* NewsCell_MVVM.swift in Sources */,
 				3B0BBD402792FF1700949CE4 /* Article.swift in Sources */,
 				3B0BBD2C2792802A00949CE4 /* Uiviewcontroller+Extension.swift in Sources */,
+				3BE2E71227952A2D00E618EA /* GoodWeatherViewController.swift in Sources */,
 				3BA18FF5279164BA00E0B1F1 /* TaskListViewController.swift in Sources */,
+				3BE2E7142795379200E618EA /* WeatherResult.swift in Sources */,
+				3BE2E71627953DAE00E618EA /* URL+Extension.swift in Sources */,
 				3BD10BBB2790609800867A34 /* MainViewController.swift in Sources */,
 				3BA18FEF2791474800E0B1F1 /* PhotoCollectionViewCell.swift in Sources */,
 				3B0BBD39279296FC00949CE4 /* Task.swift in Sources */,
 				3B0BBD2E279283D200949CE4 /* ToDoAddViewController.swift in Sources */,
+				3BE2E71D27956CD800E618EA /* Article_MVVM.swift in Sources */,
+				3BE2E71B279568D500E618EA /* NewsTableViewController_MVVM.swift in Sources */,
 				3BD10BB72790609800867A34 /* AppDelegate.swift in Sources */,
 				3BA18FF1279153B300E0B1F1 /* FilterService.swift in Sources */,
 				3B0BBD3D2792D8CF00949CE4 /* NewsTableViewController.swift in Sources */,
+				3BE2E71F2795706100E618EA /* ArticleViewModel_MVVM.swift in Sources */,
 				3BFD87572794536600BCF06B /* URLRequest+Extension.swift in Sources */,
 				3B23A74C279303DD00980742 /* NewsCell.swift in Sources */,
 				3BD10BB92790609800867A34 /* SceneDelegate.swift in Sources */,

@@ -37,9 +37,7 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
                 var existingTasks = self.tasks.value
                 existingTasks.append(task)
                 self.tasks.accept(existingTasks)
-                
                 self.filterTasks(by: priority)
-                
             }).disposed(by: disposeBag)
         nav.modalPresentationStyle = .overCurrentContext//fullscreen하면 마지막에 깜빡거림.
         present(nav, animated: true)
@@ -52,30 +50,26 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func filterTasks(by priority: Priority?) {
-       
-        print(tasks.value.count)
+
         if priority == nil {
             self.filteredTasks = self.tasks.value
             self.updateTableView()
         } else {
-            self.tasks.map{ tasks in
+            self.tasks.map{ tasks -> Array<Task> in//@@
+                print("1: ",tasks)
                 return tasks.filter{ $0.priority == priority!}
-            }.subscribe(onNext:{ [weak self] tasks in
-                self?.filteredTasks = tasks
-//                print(tasks)
+            }.subscribe(onNext:{ [weak self] filtered in
+                self?.filteredTasks = filtered
+                print("filtered:",filtered)
                 self?.updateTableView()
             }).disposed(by: disposeBag)
         }
     }
     
-    
     @IBAction func priorityValueChanged(_ sender: UISegmentedControl) {
         let priority = Priority(rawValue: sender.selectedSegmentIndex - 1)
         self.filterTasks(by: priority)
     }
-    
-    
-    
     
     @objc func goToBack(){
         self.dismiss(animated: true)
