@@ -11,7 +11,6 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var prioritySegmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
-    
 //    private var tasks = Variable<[Task]>([])
     private var tasks = BehaviorRelay<[Task]>(value: [])
     private var filteredTasks = [Task]()

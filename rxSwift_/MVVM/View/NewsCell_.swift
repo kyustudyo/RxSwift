@@ -9,7 +9,7 @@ import Foundation
 
 import UIKit
 
-class NewsCell_MVVM : UITableViewCell {
+class NewsCell_ : UITableViewCell {
     
     let mainLabel : UILabel = {
         let label = UILabel()

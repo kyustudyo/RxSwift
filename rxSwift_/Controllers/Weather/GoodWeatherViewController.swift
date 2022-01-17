@@ -14,8 +14,6 @@ class GoodWeatherViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
-    
-    
     private let cityNameTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .systemGray

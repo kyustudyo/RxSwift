@@ -9,36 +9,37 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct ArticleListViewModel_MVVM {
-    let articlesVM: [ArticleViewModel_MVVM]
+struct ArticleListViewModel_ {
+    let articlesVM: [ArticleViewModel_]
 }
 
-extension ArticleListViewModel_MVVM {
+extension ArticleListViewModel_ {
     
-    init(_ articles: [Article_MVVM]) {
-        self.articlesVM = articles.compactMap(ArticleViewModel_MVVM.init)
+    init(_ articles: [Article_]) {
+        self.articlesVM = articles.compactMap(ArticleViewModel_.init)
     }
     
 }
-
-extension ArticleListViewModel_MVVM {
+extension ArticleListViewModel_ {
     
-    func articleAt(_ index: Int) -> ArticleViewModel_MVVM {
+    func articleAt(_ index: Int) -> ArticleViewModel_ {
         return self.articlesVM[index]
     }
 }
 
-struct ArticleViewModel_MVVM {
+
+
+struct ArticleViewModel_ {
     
-    let article: Article_MVVM
+    let article: Article_
     
-    init(_ article: Article_MVVM) {
+    init(_ article: Article_) {
         self.article = article
     }
     
 }
 
-extension ArticleViewModel_MVVM {
+extension ArticleViewModel_ {
     
     var title: Observable<String> {
         return Observable<String>.just(article.title)

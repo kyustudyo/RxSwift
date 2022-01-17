@@ -96,7 +96,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func showNewsVC_MVVM(){
-        let vc = NewsTableViewController_MVVM()
+        let vc = NewsTableViewController_()
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle  = .overCurrentContext
         //nav 였는데 또 nav 하면 새로운 nav로 나타난다.

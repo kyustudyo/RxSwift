@@ -6,17 +6,19 @@
 //
 
 import Foundation
-struct ArticlesList_MVVM: Decodable {
-    let articles: [Article_MVVM]
+struct ArticlesList_: Decodable {
+    let articles: [Article_]
 }
-extension ArticlesList_MVVM {
-    static var all: Resource<ArticlesList_MVVM> = {
+extension ArticlesList_ {
+    
+    static var all: Resource<ArticlesList_> = {
         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=1f32f1a3f3a042e498cec8738ff44706")!
         return Resource(url: url)
     }()
+    
 }
 
-struct Article_MVVM: Decodable {
+struct Article_: Decodable {
     let title: String
     let description: String? // 가끔 데이터 없는게 있다.
 }

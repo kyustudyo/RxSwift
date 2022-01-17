@@ -23,7 +23,6 @@ class NewsTableViewController : UITableViewController {
         configureUI()
         populateNews()
         
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,8 +50,7 @@ class NewsTableViewController : UITableViewController {
     }
     
     private func populateNews() {
-        
-
+    
         URLRequest.load(resource: ArticlesList.all)
             .subscribe(onNext: { [weak self] result in
                 if let result = result {

@@ -17,6 +17,7 @@ class FiltersService {
     init() {
         self.context = CIContext()
     }
+    
     func applyFilter(to inputImage: UIImage) -> Observable<UIImage> {
         
         return Observable<UIImage>.create { observer in
