@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         
         
-        
 //        rgba(52, 152, 219,1.0) flat UI website 참고
         
         UINavigationBar.appearance().backgroundColor = UIColor(displayP3Red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
