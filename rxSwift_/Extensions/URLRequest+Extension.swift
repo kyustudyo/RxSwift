@@ -12,7 +12,10 @@ import RxCocoa
 struct Resource<T: Decodable> {
     let url: URL
 }
-
+enum requestError: Error {
+    case notResponse(String)
+    case notDecode(String)
+}
 extension URLRequest {
     static func load<T>(resource: Resource<T>) -> Observable<T?> {
         return Observable.from([resource.url])
@@ -24,17 +27,22 @@ extension URLRequest {
         }.asObservable()
     }
     
-    static func loadWithErrorHandling<T>(resource: Resource<T>) -> Observable<T?> {
+    static func loadWithErrorHandling<T>(resource: Resource<T>) -> Observable<T> {
         
         return Observable.just(resource.url)
             .flatMap { url -> Observable<(response: HTTPURLResponse, data: Data)> in
                 let request = URLRequest(url: url)
                 return URLSession.shared.rx.response(request: request)
-            }.map { (response, data) -> T? in
+            }.map { (response, data) -> T in
                 if 200..<300 ~= response.statusCode {
-                    return try? JSONDecoder().decode(T.self, from: data)
+                    if let decoded = try? JSONDecoder().decode(T.self, from: data) {
+                        return decoded
+                    }
+                    else {throw requestError.notDecode("can not decode")}
+                    
                 } else {
-                    throw RxCocoaURLError.httpRequestFailed(response: response, data: data)
+                    throw requestError.notResponse("can not respond")
+//                    throw RxCocoaURLError.httpRequestFailed(response: response, data: data)
                 }
             }.asObservable()
         

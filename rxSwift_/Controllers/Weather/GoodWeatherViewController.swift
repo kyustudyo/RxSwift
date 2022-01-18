@@ -16,21 +16,20 @@ class GoodWeatherViewController: UIViewController {
     
     private let cityNameTextField: UITextField = {
         let textField = UITextField()
-        textField.backgroundColor = .systemGray
+        textField.attributedPlaceholder = NSAttributedString(string: "city name_", attributes: [.foregroundColor : UIColor.systemGray])
+        textField.borderStyle = .roundedRect
         textField.returnKeyType = .search
         return textField
     }()
     private let temperatureLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 40)
-        label.backgroundColor = .systemGray
         label.numberOfLines = 0
         return label
     }()
     private let humidityLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
-        label.backgroundColor = .systemGray
         label.numberOfLines = 0
         return label
     }()
@@ -73,7 +72,7 @@ class GoodWeatherViewController: UIViewController {
         view.backgroundColor = .white
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrowshape.turn.up.backward"), style: .plain, target: self, action: #selector(goToBack))
         navigationItem.title = "weather!"
-        navigationController?.navigationBar.prefersLargeTitles = true
+
         
         view.addSubview(cityNameTextField)
         view.addSubview(humidityLabel)
@@ -92,12 +91,11 @@ class GoodWeatherViewController: UIViewController {
             
             humidityLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             humidityLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            humidityLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            humidityLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            
             
             temperatureLabel.centerXAnchor.constraint(equalTo: humidityLabel.centerXAnchor),
             temperatureLabel.topAnchor.constraint(equalTo: humidityLabel.bottomAnchor, constant: 30),
-            temperatureLabel.widthAnchor.constraint(equalToConstant: 200)
+            
         ])
     }
     
@@ -162,15 +160,15 @@ class GoodWeatherViewController: UIViewController {
             .observeOn(MainScheduler.instance)
             .retry(3)//retry
             .catchError{ error in
-                print(error.localizedDescription)
+                print(error)
                 return Observable.just(WeatherResult.empty)
             }.asDriver(onErrorJustReturn: WeatherResult.empty)
         
-        search.map { "\($0?.main.temp) ℉" }
+        search.map { "\($0.main.temp) ℉" }
         .drive(self.temperatureLabel.rx.text)
         .disposed(by: disposeBag)
         
-        search.map { "\($0?.main.humidity) 💦" }
+        search.map { "\($0.main.humidity) 💦" }
         .drive(self.humidityLabel.rx.text)
         .disposed(by: disposeBag)
     }

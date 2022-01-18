@@ -23,7 +23,7 @@ class NewsTableViewController_: UITableViewController {
     }
     private func configureUI() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrowshape.turn.up.backward"), style: .plain, target: self, action: #selector(goToBack))
-        navigationItem.title = "news!"
+        navigationItem.title = "news MMVM"
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.register(NewsCell_.self, forCellReuseIdentifier: reuseIdentifier_MVVM)
         tableView.rowHeight = UITableView.automaticDimension

@@ -21,9 +21,11 @@ class MainViewController: UIViewController {
     }()
     
     private let applyFilterButton : UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.addTarget(self, action: #selector(applyFilterButtonPressed), for: .touchUpInside)
+        button.setTitle("Filter!", for: .normal)
         button.isHidden = true
+        
         return button
     }()
     
@@ -45,6 +47,7 @@ class MainViewController: UIViewController {
 //    }
     
     private func configureUI(){
+        view.backgroundColor = .white
         self.navigationItem.title = "Main"
         let toDo =  UIBarButtonItem(image: UIImage(systemName: "pencil"), style: .plain, target: self, action: #selector(showToDoVC))
         let news =  UIBarButtonItem(image: UIImage(systemName: "doc.text.fill"), style: .plain, target: self, action: #selector(showNewsVC))
@@ -60,11 +63,12 @@ class MainViewController: UIViewController {
         view.addSubview(photoImageView)
         view.addSubview(applyFilterButton)
         
-        let buttonBottomAnchor =  applyFilterButton.bottomAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 30)
-        buttonBottomAnchor.priority = .defaultHigh
+        let buttonBottomAnchor =  applyFilterButton.bottomAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 10)
+
 
         let buttonTopAnchor = applyFilterButton.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 24)
-        buttonTopAnchor.priority = .defaultLow
+        
+        
         
         NSLayoutConstraint.activate([
             photoImageView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
@@ -74,10 +78,14 @@ class MainViewController: UIViewController {
             
             applyFilterButton.centerXAnchor.constraint(equalTo: photoImageView.centerXAnchor),
             applyFilterButton.widthAnchor.constraint(equalToConstant: 130),
+            applyFilterButton.heightAnchor.constraint(equalToConstant: 60),
+            
             buttonBottomAnchor,
             buttonTopAnchor
             
         ])
+        buttonBottomAnchor.priority = .defaultHigh
+        buttonTopAnchor.priority = .defaultLow
             }
     
      @objc func applyFilterButtonPressed(){
@@ -143,7 +151,8 @@ class MainViewController: UIViewController {
         present(nav, animated: true, completion: nil)
     }
     @objc func showPhotoVC(){
-        let vc = PhotosCollectionViewController()
+        let layout = UICollectionViewFlowLayout()
+        let vc = PhotosCollectionViewController(collectionViewLayout: layout)
         vc.selectedPhoto.subscribe(onNext:{[weak self] photo in
             self?.updateUI(with: photo)
         }).disposed(by: disposeBag)

@@ -26,9 +26,9 @@ class ToDoAddViewController : UIViewController{
     private let textField : UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
-        textField.attributedPlaceholder = NSAttributedString(string: "..", attributes: [.foregroundColor : UIColor.blue])
+        textField.attributedPlaceholder = NSAttributedString(string: "todo", attributes: [.foregroundColor : UIColor.systemGray])
         textField.font = UIFont.systemFont(ofSize: 16)
-        textField.backgroundColor = .systemGray
+        
         return textField
     }()
     
@@ -52,7 +52,6 @@ class ToDoAddViewController : UIViewController{
         
         segmentControl.translatesAutoresizingMaskIntoConstraints = false
         textField.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             segmentControl.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 50),
             segmentControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
